@@ -28,6 +28,13 @@ public class ArrayOfInts {
         return sumOfInts(even);
     }
 
+    public int sumOfXLargest(int[] arrayOfInts, int x) {
+        if (arrayOfInts == null) return 0;
+        int [] copy = Arrays.copyOf(arrayOfInts, arrayOfInts.length);
+        Arrays.sort(copy);
+        return sumOfInts(Arrays.copyOfRange(copy,Math.max(copy.length - x, 0), copy.length));
+    }
+
     public static void main(String[] args) {
         ArrayOfInts ex1 = new ArrayOfInts();
         int result = ex1.sumOfInts(new int[]{1, 2, 3, 4});

@@ -25,21 +25,21 @@ public class ArrayOfIntsCountMostPopularNumberTest {
         assertEquals(1, result);
     }
 
-//    @Test
-//    public void differentNumbers() {
-//        int result = arrayOfInts.countMostPopularNumber(new int[]{33, 24, 36});
-//        assertEquals(1, result);
-//    }
-//
-//    @Test
-//    public void equalNumbers() {
-//        int result = arrayOfInts.countMostPopularNumber(new int[]{24, 24, 36});
-//        assertEquals(2, result);
-//    }
-//
-//    @Test
-//    public void severalEqualNumbers() {
-//        int result = arrayOfInts.countMostPopularNumber(new int[]{24, 36, 12, 24, 15, 36, 12, 10, 36});
-//        assertEquals(3, result);
-//    }
+    @Test
+    public void differentNumbers() {
+        int result = arrayOfInts.countMostPopularNumber(new int[]{33, 24, 36});
+        assertEquals(1, result);
+    }
+
+    @Test
+    public void equalNumbers() {
+        int result = arrayOfInts.countMostPopularNumber(new int[]{24, 24, 36});
+        assertEquals(2, result);
+    }
+
+    @Test
+    public void severalEqualNumbers() {
+        int result = arrayOfInts.countMostPopularNumber(new int[]{24, 36, 12, 24, 15, 36, 12, 10, 36});
+        assertEquals(3, result);
+    }
 }

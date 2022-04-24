@@ -1,6 +1,6 @@
 package ex01_arrays;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class ArrayOfInts {
 
@@ -37,7 +37,16 @@ public class ArrayOfInts {
 
     public int countMostPopularNumber(int[] arrayOfInts){
         if (arrayOfInts == null || arrayOfInts.length == 0) return 0;
-        return 0;
+        HashMap<Integer,Integer> map = new HashMap<>();
+        Arrays.stream(arrayOfInts).forEach(n -> {
+            if (!map.containsKey(n)) {
+                map.put(n, 1);
+            } else {
+                Integer value = map.get(n);
+                map.put(n, ++value);
+            }
+        });
+        return map.entrySet().stream().max(Comparator.comparing(HashMap.Entry::getValue)).get().getValue();
     }
 
     public static void main(String[] args) {

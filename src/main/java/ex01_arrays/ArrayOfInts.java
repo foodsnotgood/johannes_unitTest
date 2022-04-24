@@ -35,6 +35,11 @@ public class ArrayOfInts {
         return sumOfInts(Arrays.copyOfRange(copy,Math.max(copy.length - x, 0), copy.length));
     }
 
+    public int countMostPopularNumber(int[] arrayOfInts){
+        if (arrayOfInts == null || arrayOfInts.length == 0) return 0;
+        return 0;
+    }
+
     public static void main(String[] args) {
         ArrayOfInts ex1 = new ArrayOfInts();
         int result = ex1.sumOfInts(new int[]{1, 2, 3, 4});
